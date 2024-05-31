@@ -1,0 +1,33 @@
+/* Button */
+
+.button {
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-flex;
+}
+
+.button_header {
+    color: #2c2f2f;
+    background-color: #f2e8d9;
+
+    border: 0;
+    border-radius: 0.5em;
+
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: 700;
+
+    transition: color .5s linear;
+}
+
+.button_header:hover {
+    color: #f2e8d9;
+    background-color: #ec8e00;
+}
+
+#button_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

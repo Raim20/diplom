@@ -1,0 +1,244 @@
+/* Popup */
+
+.popup_container {
+    width: 580px;
+    height: 140px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: -100%;
+    /* bottom: 20%; */
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #585e5e;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border: 0;
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); */
+    z-index: 9999;
+    transition: bottom 0.5s ease;
+}
+
+.close_btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+
+/* Popup cards style */
+
+.popup_card_header {
+    /* margin: 60px 120px; */
+
+    width: 580px;
+    height: 140px;
+
+    display: flex;
+    justify-content: center;
+
+    /* padding: 20px; */
+}
+
+.popup_card_style {
+    /* width: calc(20% - 2em); */
+    /*width: 215px;*/
+    /* height: 100%; */
+    width: calc(33.333% - 20px);
+    max-width: 180px;
+    /* height: 100px; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #3e4242;
+
+    border: 0;
+    border-radius: 5px;
+
+    /* margin: 10px; */
+
+    margin: 0 1em;
+    
+    position: relative;
+
+    cursor: pointer;
+
+    transition: 1.5s;
+}
+
+/* .popup_card_header {
+    width: 100%;
+    max-width: 1260px;
+    max-height: 720px;
+
+    position: relative;
+} */
+
+.popup_card_image {
+    width: 100%;
+
+    border: 0;
+    border-radius: 1em;
+}
+
+.popup_card_item_image {
+    max-width: 64px;
+    height: 64px;
+    /* height: auto; */
+    
+    margin-bottom: 10px;
+    padding-top: 5px;
+
+    transition: 0.4s;
+}
+
+.popup_card_name {
+    display: flex;
+}
+
+.popup_card_price {
+    padding-top: 2px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .popup_card_item_image, .popup_card_name {
+    cursor: pointer;
+} */
+
+
+
+
+/* .catalog_page_1_list_1_item_image {
+    width: 100%;
+
+    border: 0;
+    border-radius: 1em;
+} */
+
+/* .catalog_page_1_style {
+    width: 100%;
+    max-width: 1260px;
+
+    margin: auto;
+} */
+
+
+
+
+
+
+/* Popup text style */
+
+.popup_card_name_style {
+    /*width: 8em;*/
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #f2e8d9;
+}
+
+.popup_card_price_style {
+    padding-right: 8px;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #e3c18a;
+}
+
+
+/* Popup animation */
+
+.popup_container.show {
+    bottom: 20%;
+}
+
+.popup_container.hiding {
+    bottom: -10%;
+    cursor: pointer;
+}
+
+.popup_container.hiding:hover {
+    bottom: -5%;
+}
+
+.popup_card_style:hover .popup_card_item_image{
+    transform: scale(1.03);
+    transition: 0.75s;
+}
+
+.popup_card_style:hover .popup_card_name{
+    color: #e3c18a;
+    transition: color .5s linear;
+}
+
+/* .popup_card_name:hover {
+    color: #e3c18a;
+    transition: color .5s linear;
+} */
+
+.popup_container.hiding .popup_card_style:hover {
+    transform: none;
+}
+
+.popup_container.hiding .popup_card_style .popup_card_item_image {
+    transform: none;
+}
+
+.popup_container.hiding .popup_card_style .popup_card_name {
+    color: #f2e8d9;
+}
+
+
+
+
+/* .popup-container h2 {
+    margin-top: 0;
+} */
+
+
+
+
+#readyBtn {
+    position: fixed;
+    bottom: 25%;
+    right: 50%;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* .ready_btn {
+    display: none;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+}
+
+.ready_btn.show {
+    display: block;
+} */
+

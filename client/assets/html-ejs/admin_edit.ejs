@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title | <%= title %></title>
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/icon-style.css">
+  <link rel="stylesheet" href="/button-style.css">
+  <link rel="stylesheet" href="/admin-style.css">
+<!--  <script type="module" src="/static_functions/admin-edit.js"></script>-->
+<!--  <script type="module" src="/static_functions/admin-edit-submit.js"></script>-->
+  <script type="module" src="/static_functions/get_genre_edit.js"></script>
+  <script type="module" src="/static_functions/get_language_edit.js"></script>
+  <script type="module" src="/static_functions/get_platform_edit.js"></script>
+</head>
+<body>
+<div>
+  <div class="">
+    <div class="container">
+      <%- include('./partials/nav.ejs') %>
+    </div>
+  </div>
+  <div class="profile">
+    <div class="container">
+      <div data-id="#<%- id %>" class="update_container">
+        <form action="">
+          <div class="">
+            <input id="game_name_to_update" class="" type="text" placeholder="Name" name="name" value="">
+            <input type="reset" value="reset">
+          </div>
+        </form>
+        <form action="">
+          <div>
+            <input id="game_id_to_update" class="" type="text" placeholder="Id of game" name="id" value="#ia">
+            <input type="reset" value="reset">
+          </div>
+        </form>
+        <form action="">
+          <div>
+            <input id="game_price_to_update" class="" type="text" placeholder="Price" name="price" value=" $">
+            <input type="reset" value="reset">
+          </div>
+        </form>
+        <form action="" enctype="multipart/form-data">
+          <input id="game_img_to_update" class="game_img_update_style" type="file" placeholder="file" name="file" accept="image/png, image/jpeg" multiple="false">
+          <img id="img_of_game" class="game_img" src="/svg/profile.svg" alt="">
+        </form>
+        <form action="">
+          <div>
+            <textarea placeholder="Info" name="info" id="game_info_to_update_text" cols="30" rows="10"></textarea>
+            <input type="reset" value="reset">
+          </div>
+        </form>
+        <form action="">
+          <div class="checkbox_style">Genres</div>
+          <div class="checkbox_flex">
+            <div id="game_genres_to_create" class="game_genres_to_create">
+            </div>
+            <input type="reset" value="reset">
+          </div>
+        </form>
+        <div id="game_stats_to_update" class="">
+          <form action="">
+            <div class="checkbox_style">Platform</div>
+            <div id="game_stats_platform_to_update_header" class="">
+            </div>
+<!--            <div id="game_stats_platform_to_update" class="">-->
+<!--              <div class="checkbox_style">Windows</div>-->
+<!--              <div class="checkbox_flex">-->
+<!--                <div class="platform_checkbox_flex">-->
+<!--                  <input id="game_stats_platform_to_update_label" class="" type="checkbox" placeholder="Platform" name="platform" value="">-->
+<!--                  <label class="checkbox_style" for="">Windows 7</label>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+            <input type="reset" value="reset">
+          </form>
+          <form action="">
+            <div class="checkbox_style">Release date</div>
+            <div id="game_stats_release_date_to_update" class="game_stats_release_date_to_update">
+              <input id="game_stats_release_date_to_update_label" class="" type="date" placeholder="Release date" name="release_date" value="">
+              <input type="reset" value="reset">
+            </div>
+          </form>
+          <form action="">
+            <div class="checkbox_style">Language</div>
+            <div id="game_stats_language_to_update" class="game_stats_language_to_update">
+            </div>
+            <input type="reset" value="reset">
+          </form>
+          <form action="">
+            <div id="game_stats_size_to_update" class="game_stats_size_to_update">
+              <input id="game_stats_size_to_update_label" class="" type="text" placeholder="Size" name="size" value="">
+              <input type="reset" value="reset">
+            </div>
+          </form>
+          <form action="">
+            <div id="game_stats_publisher_to_update" class="game_stats_publisher_to_update">
+              <input id="game_stats_publisher_to_update_label" class="" type="text" placeholder="Publisher" name="publisher" value="">
+              <input type="reset" value="reset">
+            </div>
+          </form>
+          <form action="">
+            <div id="game_stats_developer_to_update" class="game_stats_developer_to_update">
+              <input id="game_stats_developer_to_update_label" class="" type="text" placeholder="Developer" name="developer" value="">
+              <input type="reset" value="reset">
+            </div>
+          </form>
+          <form action="">
+            <div class="checkbox_style">Mode</div>
+            <div id="game_stats_mode_to_update" class="game_stats_mode_to_update">
+              <div class="game_stats_mode_to_update_label">
+                <input id="single_player" class="game_stats_mode_to_update" type="checkbox" placeholder="Mode" name="mode" value="Single-player">
+                <label class="checkbox_style" for="">Single-player</label>
+              </div>
+              <div class="game_stats_mode_to_update_label">
+                <input id="multiplayer" class="game_stats_mode_to_update" type="checkbox" placeholder="Mode" name="mode" value="Multiplayer">
+                <label class="checkbox_style" for="">Multiplayer</label>
+              </div>
+              <input type="reset" value="reset">
+            </div>
+          </form>
+        </div>
+        <div>
+          <button id="game_save_button" class="game_save_button">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--      <form action="">-->
+
+<!--        <input type="reset" value="reset">-->
+<!--      </form>-->
+<!--      <input type="reset" value="reset">-->
+
+<!--        <form action="">-->
+<!--          <div>-->
+<!--            <input id="game_info_to_edit" class="" type="text" placeholder="Info" name="info" value="">-->
+<!--            <input type="reset" value="reset">-->
+<!--          </div>-->
+<!--        </form>-->
+<!--        <form action="">-->
+<!--          <div>-->
+<!--            <input id="game_genres_to_edit" class="" type="text" placeholder="Genres" name="genres" value="">-->
+<!--            <input type="reset" value="reset">-->
+<!--          </div>-->
+<!--        </form>-->
+<!--        <form action="">-->
+<!--          <div>-->
+<!--            <input id="game_stats_to_edit" class="" type="text" placeholder="Stats" name="stats" value="">-->
+<!--            <input type="reset" value="reset">-->
+<!--          </div>-->
+<!--        </form>-->
+
+
+
+
+  <script type="module" src="/static_functions/admin-edit.js"></script>
+  <script type="module" src="/static_functions/admin-edit-submit.js"></script>
+  <%- include('./partials/page_end.ejs') %>
+</div>
+</body>
+</html>

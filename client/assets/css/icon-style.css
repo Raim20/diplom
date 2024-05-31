@@ -1,0 +1,43 @@
+/* Icon */
+
+.icon {
+    width: 60px;
+    height: 35px;
+}
+
+.icon_page_end_header {
+    display: flex;
+}
+
+.icon_page_end {
+    padding-left: 16px;
+}
+
+.icon_page_end_link {
+    width: 24px;
+    height: 24px;
+    padding-left: 8px;
+}
+
+.icon_background_image_2_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_background_image_2 {
+    margin: 2em;
+}
+
+.icon_background_image_2_link {
+    margin: 0 1em;
+    height: 3em;
+}
+
+.basket_icon {
+    padding-right: 1em;
+}
+
+.profile_icon {
+    padding-left: 1em;
+}

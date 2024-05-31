@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My project |
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/icon-style.css">
+    <link rel="stylesheet" href="/button-style.css">
+    <!-- <script type="module" src="/components/route-map.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script> -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="background_image_3">
+            <div class="container">
+                <%- include('./partials/nav.ejs') %>
+                    <!-- <div>
+                    <form id="routeForm">
+                        <label for="start">Start:</label>
+                        <input type="text" id="start" name="start">
+                        <label for="end">End:</label>
+                        <input type="text" id="end" name="end">
+                        <button type="submit">Get Route</button>
+                    </form>
+                </div> -->
+                    <div id='map'></div>
+            </div>
+        </div>
+        <%- include('./partials/page_end.ejs') %>
+            <!-- <script type="module" src="/components/route-map.js"></script> -->
+            <script type="module" src="/components/route-map copy.js"></script>
+            <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    </div>
+</body>
+
+</html>
+
+
+
+
+<!-- <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoicmFpbW1lZ2EiLCJhIjoiY2x2NDlndGJoMDZtZzJpcjJkaWNrdDVsOSJ9.Y9he5g5b_LeHk8qXQgtnnA';
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    center: [70, 44],
+                    zoom: 10,
+                    dragRotate: false
+                });
+
+                var markers = [];
+                var directions = null;
+
+                map.on('click', function(e) {
+                    if (markers.length < 2) {
+                        // if (markers.length === 2) {
+                        //     markers.forEach(function(marker) {
+                        //         marker.remove();
+                        //     });
+                        //     markers = [];
+                        // }
+                        // if (markers.length === 1) {
+                        //     markers[0].remove();
+                        //     markers.pop();
+                        // }
+
+                        // if (markers.length === 1) {
+                        //     markers[0].remove();
+                        //     markers.pop();
+                        // }
+
+                        var marker = new mapboxgl.Marker()
+                            .setLngLat(e.lngLat)
+                            .addTo(map);
+
+                        markers.push(marker);
+
+                        // markers.forEach(function(marker, index) {
+                        //     var coordinates = marker.getLngLat();
+                        //     // directions[index] = {
+                        //     //     lngLat: coordinates,
+                        //     //     fullData: e
+                        //     // };
+                        // });
+
+                        if (markers.length === 2) {
+                            var coordinates = markers.map(function(marker) {
+                                return marker.getLngLat();
+                            });
+
+                            new mapboxgl.Marker({ color: 'red' })
+                                .setLngLat(coordinates[0])
+                                .addTo(map);
+
+                            new mapboxgl.Marker({ color: 'blue' })
+                                .setLngLat(coordinates[1])
+                                .addTo(map);
+
+                            var route = {
+                                'type': 'FeatureCollection',
+                                'features': [
+                                    {
+                                        'type': 'Feature',
+                                        'properties': {},
+                                        'geometry': {
+                                            'type': 'LineString',
+                                            'coordinates': [
+                                                [coordinates[0].lng, coordinates[0].lat],
+                                                [coordinates[1].lng, coordinates[1].lat]
+                                            ]
+                                        }
+                                    }
+                                ]
+                            };
+
+                            map.addSource('route', {
+                                'type': 'geojson',
+                                'data': route
+                            });
+
+                            map.addLayer({
+                                'id': 'route',
+                                'type': 'line',
+                                'source': 'route',
+                                'layout': {
+                                    'line-join': 'round',
+                                    'line-cap': 'round'
+                                },
+                                'paint': {
+                                    'line-color': '#888',
+                                    'line-width': 8,
+                                    'line-opacity': 0.75
+                                }
+                            });
+                            
+                            // var url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + coordinates[0].join(',') + ';' + coordinates[1].join(',') + '?steps=true&access_token=' + mapboxgl.accessToken;
+                            // var url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + coordinates[0].lng + ',' + coordinates[0].lat + ';' + coordinates[1].lng + ',' + coordinates[1].lat + '?steps=true&access_token=' + mapboxgl.accessToken;
+                            // fetch(url)
+                            //     .then(function(response) {
+                            //         return response.json();
+                            //     })
+                            //     .then(function(data) {
+                            //         console.log(data);
+                            //         var route = data.routes[0].geometry;
+                            //         map.addLayer({
+                            //             id: 'route',
+                            //             type: 'line',
+                            //             source: {
+                            //                 type: 'geojson',
+                            //                 data: {
+                            //                     type: 'Feature',
+                            //                     properties: {},
+                            //                     geometry: route
+                            //                 }
+                            //             },
+                            //             layout: {
+                            //                 'line-join': 'round',
+                            //                 'line-cap': 'round'
+                            //             },
+                            //             paint: {
+                            //                 'line-color': '#3887be',
+                            //                 'line-width': 8,
+                            //                 'line-opacity': 0.75
+                            //             }
+                            //         });
+                            //     });
+                        }
+                    }
+                });
+            </script> -->

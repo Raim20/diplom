@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My project | <%= title %></title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/icon-style.css">
+    <link rel="stylesheet" href="/button-style.css">
+</head>
+<body>
+<div>
+    <div class="background_image_3">
+        <div class="container">
+            <%- include('./partials/nav.ejs') %>
+            <div class="text_header_style">
+                Who are we?
+            </div>
+            <div class="text_information_style">
+                <span class="text_information_style_1">My game</span>
+                <span>
+                - we are an online platform for buying digital copies of the game and evaluating prices from different marketplaces.
+                We provide convenient and fast ordering options.
+                Our team is developing to make our site accessible in any country or continent.
+            </span>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/page_end.ejs') %>
+</div>
+</body>
+</html>

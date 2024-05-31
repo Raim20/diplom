@@ -1,0 +1,201 @@
+.button_create_container {
+    width: 1480px;
+    height: 30px;
+}
+
+.button_create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    margin: 0 1em;
+}
+
+.button_create_style {
+    color: #2c2f2f;
+    background-color: #f2e8d9;
+
+    border: 0;
+    border-radius: 0.5em;
+
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: 700;
+
+    transition: color .5s linear;
+}
+
+.button_create_style:hover {
+    color: #f2e8d9;
+    background-color: #ec8e00;
+}
+
+.admin_items {
+    max-width: 1480px;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+
+    margin: 2em auto;
+}
+
+.admin_item_link {
+    text-decoration: none;
+}
+
+.checkbox_style {
+    /*height: 40px;*/
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #f2e8d9;
+
+    /*margin: 0 1em;*/
+}
+
+.checkbox_flex {
+    display: flex;
+    align-items: flex-end;
+}
+
+.platform_checkbox_flex {
+    width: 160px;
+    margin-right: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button_next_page_container {
+    width: 1480px;
+    height: 30px;
+}
+
+.button_next_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    margin: 0 1em;
+}
+
+.button_next_page_style {
+    color: #2c2f2f;
+    background-color: #f2e8d9;
+
+    border: 0;
+    border-radius: 0.5em;
+
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: 700;
+
+    transition: color .5s linear;
+}
+
+.button_next_page_style:hover {
+    color: #f2e8d9;
+    background-color: #ec8e00;
+}
+
+.genre_style {
+    /*height: 40px;*/
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #f2e8d9;
+
+    /*margin: 0 1em;*/
+}
+
+/* Game create style */
+
+.game_genres_to_create {
+    max-width: 1040px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game_genres_to_create_label {
+    width: 240px;
+
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.game_stats_language_to_create {
+    max-width: 1040px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game_stats_language_to_create_label {
+    width: 120px;
+
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.game_stats_mode_to_create {
+    display: flex;
+}
+
+.game_stats_mode_to_create_label {
+    width: 240px;
+
+    margin-right: 20px;
+    /*display: flex;
+    align-items: center;*/
+}
+
+
+/* Game update style */
+
+.game_genres_to_update {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game_genres_to_update_label {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.game_stats_language_to_update {
+    max-width: 1040px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game_stats_language_to_update_label {
+    width: 120px;
+
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.game_stats_mode_to_update {
+    display: flex;
+}
+
+.game_stats_mode_to_update_label {
+    width: 240px;
+
+    margin-right: 20px;
+    /*display: flex;
+    align-items: center;*/
+}

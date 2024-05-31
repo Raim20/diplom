@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="button-style.css">
+    <link rel="stylesheet" href="icon-style.css">
+    <link rel="stylesheet" href="carousel_style.css">
+    <script type="module" src="/static_functions/animate_text.js"></script>
+    <script type="module" src="/static_functions/auto_slide.js"></script>
+    <script type="module" src="/components/carousel-get.js"></script>
+</head>
+<body>
+<div>
+    <div class="background_image">
+        <video class="background_video" autoplay loop muted>
+            <source src="/video/Small-Size-Vid-Final-1.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <%- include('./assets/html-ejs/partials/nav.ejs') %>
+            <div class="page_down">
+                <div class="text_style_header animated-text">
+                    Online marketplace to buy your favorite games
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background_image_1">
+        <div class="container">
+            <div class="carousel-header">
+                <div class="carousel-container">
+                    <div class="carousel">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background_image_2">
+        <div class="container">
+            <div class="content_header">
+                <div class="text_style animated-text">
+                    You can easily find the game on our website
+                </div>
+                <div class="text_style">
+                    <p>Everything is convenient</p>
+                    <p>Compare prices</p>
+                    <p>Order quickly from any store</p>
+                </div>
+                <div id="button_1" class="button">
+                    <a class="button_header" href="assets/html/store.html">Buy now</a>
+                </div>
+                <div class="icon_background_image_2_header">
+                    <div class="icon_background_image_2">
+                        <a href="https://store.steampowered.com/"><img class="icon_background_image_2_link" src="/svg/markets_logo/logo_steam.svg" alt="Steam"></a>
+                        <a href="https://store.epicgames.com/"><img class="icon_background_image_2_link" src="/svg/markets_logo/logo_epic.svg" alt="Epic"></a>
+                        <a href="https://www.gog.com/"><img class="icon_background_image_2_link" src="/svg/markets_logo/logo_gog.svg" alt="GOG"></a>
+                        <a href="https://www.microsoft.com/"><img class="icon_background_image_2_link" src="/svg/markets_logo/logo_windows.svg" alt="Microsoft"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('./assets/html-ejs/partials/page_end.ejs') %>
+</div>
+</body>
+</html>

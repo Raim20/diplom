@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title | <%= title %></title>
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/icon-style.css">
+  <link rel="stylesheet" href="/button-style.css">
+  <link rel="stylesheet" href="/basket-style.css">
+  <link rel="stylesheet" href="/admin-style.css">
+  <script type="module" src="/static_functions/admin-get.js"></script>
+</head>
+<body>
+<div>
+  <div class="">
+    <div class="container">
+      <%- include('./partials/nav.ejs') %>
+    </div>
+  </div>
+  <div class="profile">
+    <div class="container">
+      <div class="button_create_container">
+        <div class="button_create">
+          <a class="admin_item_link" href="/admin/create">
+            <div class="button_create_style">Create data</div>
+          </a>
+        </div>
+      </div>
+      <div class="admin_items"></div>
+      <div class="button_next_page_container">
+        <div class="button_next_page">
+            <div id="nextPageButton" class="button_next_page_style">Next Page</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include('./partials/page_end.ejs') %>
+</div>
+</body>
+</html>

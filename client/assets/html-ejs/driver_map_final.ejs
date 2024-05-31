@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My project |
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/icon-style.css">
+    <link rel="stylesheet" href="/button-style.css">
+    <link rel="stylesheet" href="/map.css">
+    <link rel="stylesheet" href="/popup_style.css">
+    <style>
+        .orders-list {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 20%;
+    height: 80%;
+    overflow-y: auto;
+    background-color: rgba(249, 249, 249, 0.9);
+    border-left: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.orders-list h2 {
+    text-align: center;
+}
+
+.user_items {
+    display: flex;
+    flex-direction: column;
+}
+
+.user_item_style {
+    width: auto;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em 0;
+    /* margin: 1em 0; */
+    border-radius: 1em;
+    background-color: #3e4242;
+    padding: 1em;
+
+    cursor: pointer;
+}
+
+.user_item_image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.user_item_image_style {
+    border: 0;
+    border-radius: 1em;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.user_item_stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user_item_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.user_item_name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #f2e8d9;
+}
+
+.user_item_price {
+    font-size: 20px;
+    font-weight: 400;
+    color: #e3c18a;
+}
+
+.user_item_location {
+    font-size: 16px;
+    font-weight: 400;
+    color: #e3c18a;
+}
+
+.user_item_name_1 {
+    font-size: 100%;
+    font-weight: 500;
+    color: #f2e8d9;
+}
+
+.user_item_price_1 {
+    font-size: 100%;
+    font-weight: 400;
+    color: #e3c18a;
+}
+
+.user_item_location_1 {
+    font-size: 100%;
+    font-weight: 400;
+    color: #e3c18a;
+}
+
+.user_item_location_1_content {
+    font-size: 100%;
+    font-weight: 400;
+    color: #e3c18a;
+}
+
+.user_item_info_btn {
+    display: flex;
+
+    margin: 0.5em 0;
+}
+
+.show-route-btn, .delete-route-btn {
+    width: 50%;
+
+    margin: 0 0.25em;
+    
+    cursor: pointer;
+    color: #f2e8d9;
+    background-color: #585e5e;
+    border: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-left: 0;
+    border-right: 1px solid #ccc; */
+    border-radius: 0.5em;
+    /* border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em; */
+
+    transition: color 0.3s ease;
+}
+
+.show-route-btn:hover, .delete-route-btn:hover {
+    color: #e3c18a;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <div class="background_image_3">
+            <div class="container">
+                <%- include('./partials/nav.ejs') %>
+                    <div id="map-container" class="map-container">
+                        <button id="locate-btn">Find Nearby Orders</button>
+                        <div id='map' class="map"></div>
+                        <div id="orders-list" class="orders-list">
+                        <h2>Nearby Orders</h2>
+                        <div class="user_items" id="orders">
+                            <div id="loading-indicator" style="display:none;">Loading...</div>
+                            <!-- <div class="user_item_style">
+                                <div class="user_item_stats">
+                                    <div class="user_item_info">
+                                        <div class="user_item_name">Customer: ${order.userName}</div>
+                                        <div class="user_item_price">Fare: ${order.fare}</div>
+                                    </div>
+                                    <div class="user_item_location">Location: ${order.location}</div>
+                                    <button class="show-route-btn">Show Route</button>
+                                    <button class="delete-route-btn">Delete Route</button>
+                                </div>
+                            </div>
+                            <div class="user_item_style">
+                                <div class="user_item_stats">
+                                    <div class="user_item_info">
+                                        <div class="user_item_name">Customer: ${order.userName}</div>
+                                        <div class="user_item_price">Fare: ${order.fare}</div>
+                                    </div>
+                                    <div class="user_item_location">Location: ${order.location}</div>
+                                    <button class="show-route-btn">Show Route</button>
+                                    <button class="delete-route-btn">Delete Route</button>
+                                </div>
+                            </div> -->
+                            <div class="user_item_style">
+                                <div class="user_item_stats">
+                                    <div class="user_item_info">
+                                        <div class="user_item_name_1">Customer: ${order.userName}</div>
+                                        <div class="user_item_price_1">Fare: ${order.fare}</div>
+                                    </div>
+                                    <div class="user_item_location_1">Location: ${order.location}</div>
+                                    <div class="user_item_info_btn">
+                                        <button class="show-route-btn">Show Route</button>
+                                        <button class="delete-route-btn">Delete Route</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>     
+                    </div>
+            </div>
+        </div>
+        <%- include('./partials/page_end.ejs') %>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCf1nHYl5YE5vomdD0vzdRlfRJEQ9pqZEM&libraries=places"></script>
+            <script type="module" src="/components/map/get_nearby_orders_final.js"></script>
+    </div>
+</body>
+</html>
+
+
+

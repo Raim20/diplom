@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title | <%= title %></title>
+    <link rel="stylesheet" href="/reg.css">
+    <link rel="stylesheet" href="/icon-style.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/button-style.css">
+    <script type="module" src="/components/reg_animation.js"></script>
+    <script type="module" src="/components/user_reg-get.js"></script>
+</head>
+<body>
+<div>
+    <%- include('./partials/nav.ejs') %>
+    <!-- <div class="">
+        <div class="container">
+            
+        </div>
+    </div> -->
+    <div class="sign">
+        <div class="container_of_sign" id="container">
+            <div class="form-container sign-up-container">
+                <form id="registration-form">
+                    <div class="sign_header_style">Create Account</div>
+                    <div class="social-container">
+                        <a href="#" class="social"><img src="/svg/facebook.svg" alt=""></a>
+                        <a href="#" class="social"><img src="/svg/twitter.svg" alt=""></a>
+                        <a href="#" class="social"><img src="/svg/instagram.svg" alt=""></a>
+                    </div>
+                    <div class="sign_text_style">or use your email for registration</div>
+                    <input id="name_registration" class="sign_data_text_style sign_data_name" type="text" placeholder="Name" name="name"/>
+                    <div class="error_message username-error" id="username-error"></div>
+                    <input id="email_registration" class="sign_data_text_style sign_data_email" type="email" placeholder="Email" name="email"/>
+                    <div class="error_message email-error" id="email-error"></div>
+                    <input id="password_registration" class="sign_data_text_style sign_data_password" type="password" placeholder="Password" name="password"/>
+                    <div class="error_message password-error" id="password-error"></div>
+                    <input id="re_enter_password_registration" class="sign_data_text_style sign_data_password_repeat" type="password" placeholder="Re-enter password" name="re_enter_password"/>
+                    <div class="error_message repeat-password-error" id="repeat-password-error"></div>
+                    <input id="phone_number_registration" class="sign_data_text_style sign_data_password_repeat" type="number" placeholder="Phone number" name="re_enter_password"/>
+                    <div class="error_message repeat-password-error" id="repeat-password-error"></div>
+                    <button type="submit" class="button_sign_up">Sign Up</button>
+                    <div class="rp_text_style"><a href="/reg/driver">
+                        <div class="button_href">Driver Sign Up</div>
+                    </a></div>
+                    <!-- <button type="submit" class="button_sign_up">Driver Sign Up</button> -->
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form id="login-form">
+                    <div class="sign_header_style">Sign in</div>
+                    <div class="social-container">
+                        <a href="#" class="social"><img src="/svg/facebook.svg" alt=""></a>
+                        <a href="#" class="social"><img src="/svg/twitter.svg" alt=""></a>
+                        <a href="#" class="social"><img src="/svg/instagram.svg" alt=""></a>
+                    </div>
+                    <div class="sign_text_style">or use your account</div>
+                    <input id="email_login" class="sign_data_text_style" type="email" placeholder="Email" name="email" />
+                    <div class="error_message email-error" id="email-error"></div>
+                    <input id="password_login" class="sign_data_text_style" type="password" placeholder="Password" name="password" />
+                    <div class="error_message password-error" id="password-error"></div>
+                    <div class="rp_text_style"><a href="#">Forgot your password?</a></div>
+                    <button type="submit" class="button_sign_in">Sign In</button>
+                    <div class="rp_text_style"><a href="/reg/driver">
+                        <div class="button_href">Driver Sign In</div>
+                    </a></div>
+                    <!-- <button type="submit" class="button_sign_in">Driver Sign In</button> -->
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <div class="sign_info_header_style">Welcome Back!</div>
+                        <div class="sign_info_text_style">To keep connected with us pleaselogin with your personal info</div>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <div class="sign_info_header_style">Hello, Friend!</div>
+                        <div class="sign_info_text_style">Enter your personal details and start journey with us</div>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/page_end.ejs') %>
+</div>
+</body>
+</html>

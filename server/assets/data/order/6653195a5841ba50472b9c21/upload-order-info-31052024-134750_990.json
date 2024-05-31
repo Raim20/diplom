@@ -1,0 +1,128 @@
+{
+  "userId": "6653195a5841ba50472b9c21",
+  "order": {
+    "driver": {
+      "marker": {
+        "__gm": {
+          "set": null,
+          "Pv": null,
+          "bq": {
+            "map": null,
+            "streetView": null
+          },
+          "Mo": {
+            "size": {
+              "width": 16,
+              "height": 16
+            },
+            "anchor": {
+              "x": 8,
+              "y": 8
+            },
+            "labelOrigin": {
+              "x": 8,
+              "y": 8
+            }
+          },
+          "Cv": null,
+          "pn": false
+        },
+        "gm_accessors_": {
+          "position": null,
+          "map": null,
+          "draggable": null,
+          "icon": null,
+          "clickable": null,
+          "visible": null,
+          "internalPosition": null,
+          "anchorPoint": null,
+          "animation": null,
+          "animating": null
+        },
+        "position": {
+          "lat": 43.228550000000006,
+          "lng": 76.86795000000001
+        },
+        "gm_bindings_": {
+          "position": {},
+          "map": {},
+          "draggable": {},
+          "icon": {},
+          "clickable": {},
+          "visible": {},
+          "internalPosition": {},
+          "place": {},
+          "dragging": {},
+          "label": {},
+          "cross": {},
+          "shape": {},
+          "useDefaults": {},
+          "title": {},
+          "cursor": {},
+          "zIndex": {},
+          "opacity": {},
+          "anchorPoint": {},
+          "animation": {},
+          "crossOnDrag": {},
+          "raiseOnDrag": {},
+          "animating": {}
+        },
+        "map": null,
+        "closure_uid_81236941": 387,
+        "draggable": false,
+        "icon": {
+          "path": 0,
+          "fillColor": "#a3c2c2",
+          "fillOpacity": 1,
+          "strokeWeight": 0,
+          "scale": 8
+        },
+        "clickable": true,
+        "visible": true,
+        "internalPosition": {
+          "lat": 43.228550000000006,
+          "lng": 76.86795000000001
+        },
+        "__e3_": {
+          "click_added": {},
+          "click_removed": {},
+          "dblclick_added": {},
+          "dblclick_removed": {},
+          "rightclick_added": {},
+          "rightclick_removed": {},
+          "contextmenu_added": {},
+          "contextmenu_removed": {}
+        },
+        "anchorPoint": {
+          "x": 0,
+          "y": -8,
+          "Fg": true
+        },
+        "animation": null,
+        "animating": false
+      },
+      "latlng": {
+        "lat": 43.229196559663,
+        "lng": 76.86728083670793
+      },
+      "category": "econom",
+      "id": "RRDNlmw2",
+      "name": "John"
+    },
+    "pickupLocation": {
+      "coordinates": [
+        43.2312479659396,
+        76.87064590454105
+      ]
+    },
+    "destination": {
+      "coordinates": [
+        43.244254029695654,
+        76.91888275146488
+      ]
+    },
+    "fare": 50.05,
+    "rainCoefficient": 0
+  },
+  "uploadDate": "31052024-134750_990"
+}

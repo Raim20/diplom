@@ -1,0 +1,274 @@
+/* Catalog */
+
+.catalog_style {
+    margin: 60px 120px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.catalog_item_header {
+    width: 100%;
+    max-width: 1260px;
+    max-height: 720px;
+
+    position: relative;
+}
+
+.catalog_item_image {
+    width: 100%;
+
+    border: 0;
+    border-radius: 1em;
+}
+
+.catalog_item_info {
+
+}
+
+.catalog_item_name {
+    position: absolute;
+    bottom: 1.5em;
+    left: 1.5em;
+}
+
+.catalog_item_name_style {
+    font-size: 38px;
+    font-weight: 500;
+
+    color: #e3c18a;
+}
+
+.catalog_item_price {
+    position: absolute;
+    bottom: 3.5em;
+    right: 2.5em;
+
+    display: flex;
+    align-items: center;
+}
+
+.catalog_item_price_style {
+    padding-right: 8px;
+    font-size: 28px;
+    font-weight: 400;
+
+    color: #e3c18a;
+}
+
+.catalog_page_1_style {
+    width: 100%;
+    max-width: 1260px;
+
+    margin: auto;
+}
+
+.catalog_page_1_list_1 {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+}
+
+.catalog_page_1_list_2 {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+}
+
+.catalog_page_1_list_3 {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+}
+
+.catalog_page_1_list_1_item_1 {
+    width: calc(20% - 2em);
+    /*width: 215px;*/
+    height: 100%;
+
+    margin: 1em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    transition: 1.5s;
+}
+
+.item_image {
+    transition: 0.4s;
+}
+
+.catalog_page_1_list_1_item_1:hover .item_image{
+    transform: scale(1.03);
+    transition: 0.75s;
+}
+
+.catalog_page_1_list_1_item_image {
+    width: 100%;
+
+    border: 0;
+    border-radius: 1em;
+}
+
+.catalog_page_1_list_1_item_info {
+    padding-top: 0.5em;
+
+    /*display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;*/
+}
+
+.catalog_page_1_list_1_item_name {
+    display: flex;
+}
+
+.catalog_page_1_list_1_item_name_style {
+    /*width: 8em;*/
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #f2e8d9;
+}
+
+.catalog_page_1_list_1_item_price {
+    padding-top: 2px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog_page_1_list_1_item_price_style {
+    padding-right: 8px;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #e3c18a;
+}
+
+.catalog_page_1_list_1_item_link {
+    text-decoration: none;
+}
+
+
+/* Button */
+
+.button_basket {
+    height: 2em;
+    border: 0;
+    border-radius: 0.5em;
+
+    cursor: pointer;
+    color: #2c2f2f;
+    background: #f2e8d9;
+
+    transition: color .5s linear;
+}
+
+.button_basket:hover {
+    color: #f2e8d9;
+    background-color: #ec8e00;
+}
+
+
+.item_image, .item_name {
+    cursor: pointer;
+}
+
+/*.item_image:hover {*/
+/*    scale: 1.05;*/
+/*    transition: 1.5s;*/
+/*}*/
+
+.item_name:hover {
+    color: #ec8e00;
+    transition: color .5s linear;
+}
+
+
+/* Store Test */
+
+/*.game_container {*/
+/*    margin: 60px 120px;*/
+
+/*    !*width: 1260px;*!*/
+/*    height: 1080px;*/
+
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*.game_image {*/
+/*    width: 360px;*/
+/*    height: 480px;*/
+
+
+/*}*/
+/*!**/
+/*.game_info {*/
+/*    width: 1080px;*/
+
+/*    padding-left: 2em;*/
+
+/*    font-size: 18px;*/
+/*    font-weight: 400;*/
+
+/*    display: flex;*/
+/*    flex-direction: column;*/
+
+/*    color: #f2e8d9;*/
+/*}*/
+/**!*/
+/*.game_name {*/
+/*    width: 1080px;*/
+
+/*    !*padding-left: 2em;*!*/
+
+/*    font-size: 48px;*/
+/*    font-weight: 600;*/
+
+/*    display: flex;*/
+/*    !*flex-direction: column;*!*/
+
+/*    color: #f2e8d9;*/
+/*}*/
+
+/*.a {*/
+/*    display: flex;*/
+/*}*/
+
+/*.b {*/
+/*    width: 80px;*/
+/*    !*padding-right: 1em;*!*/
+/*}*/
+
+.catalog_page_1_list_1_item_like_button {
+
+}
+
+.like_button_style {
+    cursor: pointer;
+}
+
+.catalog_page_1_list_1_item_like_button_style {
+    width: 32px;
+    height: 32px;
+
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.catalog_page_1_list_1_item_1:hover .catalog_page_1_list_1_item_like_button_style{
+    opacity: 1;
+    transition: 1.5s;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error 404 - Page Not Found | <%= title %></title>
+    <style>
+        /* Error page styles */
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: #333;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <h1>Error 404 - Page Not Found</h1>
+  <p>The page you are looking for does not exist or has been removed.</p>
+  <a href="/">Go to Home Page</a>
+</div>
+<%- include('./partials/page_end.ejs') %>
+</body>
+</html>

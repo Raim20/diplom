@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title | <%= title %></title>
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/icon-style.css">
+  <link rel="stylesheet" href="/button-style.css">
+  <link rel="stylesheet" href="/profile.css">
+  <link rel="stylesheet" href="/basket-style.css">
+  <script type="module" src="/components/profile-get.js"></script>
+  <script type="module" src="/static_functions/user_games_get.js"></script>
+  <script type="module" src="/static_functions/avatar_upload.js"></script>
+</head>
+<body>
+<div>
+  <%- include('./partials/nav.ejs') %>
+  <div class="">
+    <div class="container">
+      
+    </div>
+  </div>
+  <div class="profile">
+    <div class="container">
+      <div class="profile_style">
+        <div class="profile_info">
+          <div class="profile_avatar">
+            <form action="" enctype="multipart/form-data">
+              <input id="profile_avatar_upload" class="profile_avatar_upload_style" type="file" placeholder="file" name="file" accept="image/png, image/jpeg" multiple="false">
+              <img id="avatar_of_profile" class="profile_img" src="/svg/profile.svg" alt="">
+            </form>
+<!--            <img id="avatar_of_profile" class="profile_img" src="/svg/profile.svg" alt="">-->
+            <div id="name_of_profile" class="profile_avatar_name">Beibarys</div>
+          </div>
+          <div class="profile_information">
+            <div class="profile_text">Information</div>
+            <div class="profile_information_style">
+              <div class="profile_contact">
+                <div class="profile_info_text">
+                  <div class="profile_info_text_style">Email</div>
+                  <div id="email_of_profile" class="profile_info_style"></div>
+                </div>
+                <div class="profile_info_text">
+                  <div class="profile_info_text_style">Phone</div>
+                  <div class="profile_info_style">+7 747 679 0309</div>
+                </div>
+                <div class="profile_info_text">
+                  <div class="profile_info_text_style">Count of order</div>
+                  <div id="games_of_profile" class="games_of_user profile_info_style">0</div>
+                </div>
+              </div>
+              <div class="profile_social_media">
+                <div class="profile_social_media_style"><a href="https://discord.gg/UBBWV5tnM5"><img class="icon_page_end_link" src="/svg/discord.svg" alt=""></a></div>
+                <div class="profile_social_media_style"><a href="https://t.me/+4_WYpejfXw43OGMy"><img class="icon_page_end_link" src="/svg/twitter.svg" alt=""></a></div>
+                <div class="profile_social_media_style"><a href="https://www.instagram.com/"><img class="icon_page_end_link" src="/svg/instagram.svg" alt=""></a></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <img id="img_test" src="" alt="">
+      <div id="fileList"></div>
+<!--      <div>-->
+<!--        <form action="" enctype="multipart/form-data">-->
+<!--          <input id="profile_avatar_upload" class="profile_avatar_upload_style" type="file" placeholder="file" name="file" accept="image/png, image/jpeg" multiple="false">-->
+<!--          <img id="avatar_of_profile" class="profile_img" src="/svg/profile.svg" alt="">-->
+<!--        </form>-->
+<!--      </div>-->
+      <div class="user_items"></div>
+    </div>
+<!--    <div class="container">-->
+
+<!--    </div>-->
+  </div>
+  <%- include('./partials/page_end.ejs') %>
+</div>
+</body>
+</html>
