@@ -53,7 +53,9 @@ module.exports.getMap = async (req, res) => {
                 origin: `${start.lat},${start.lng}`,
                 destination: `${end.lat},${end.lng}`,
                 mode: "driving",
-                key: 'AIzaSyCJh5-3X07tQgE7m-EutKMJ86PXzAY0F0k'
+                key: 'AIzaSyCJh5-3X07tQgE7m-EutKMJ86PXzAY0F0k',
+                traffic_model: 'best_guess',
+                departure_time: 'now'
             }
         });
 

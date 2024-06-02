@@ -15,7 +15,7 @@
     max-height: 720px;
     display: flex;
 
-    background-color: #3e4242;
+    background-color: #262626;
 
     border: 0;
     border-radius: 1em;
@@ -34,7 +34,7 @@
     border-bottom-left-radius: 1em;
     border-top-left-radius: 1em;
 
-    background-color: #585e5e;
+    background-color: #3D3D3D;
 
     padding: 1em;
 }
@@ -71,7 +71,7 @@
     font-size: 38px;
     font-weight: 500;
 
-    color: #f2e8d9;
+    color: #edebdc;
 
     margin: 1em;
     padding-left: 0.25em;
@@ -107,7 +107,7 @@
     font-size: 24px;
     font-weight: 500;
 
-    color: #f2e8d9;
+    color: #edebdc;
 
     margin: 0 1em;
 }

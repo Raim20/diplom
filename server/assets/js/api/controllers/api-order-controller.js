@@ -567,6 +567,47 @@ module.exports.uploadCurrentUserOrder = async (req, res) => {
     }
 };
 
+module.exports.uploadUserDriverData = async (req, res) => {
+    try {
+        const { userId } = req.user;
+        const { data } = req.body;
+
+        console.log(data);
+
+        const user_data = await User.findOne({ _id: userId });
+
+        if (!user_data) {
+            return res.status(404).json({ message: "Пользователь не найден" });
+        }
+
+        console.log(user_data);
+
+        // if (validate_pickup_location(pickupLocation) && validate_destination_location(destination) && validate_fare(fare)) {
+        //     return res.status(400).json({ message: "Некорректные данные" });
+        // }
+
+        const date = moment().format("DDMMYYYY-HHmmss_SSS");
+
+        const data_for_save = {
+            userId: userId,
+            data: data,
+            uploadDate: date,
+        };
+
+        const jsonDirectory = `assets/data/user_driver_data`;
+        const jsonFileName = `upload-user-driver-data-${date}.json`;
+
+        saveDataToJsonFile(data_for_save, jsonDirectory, jsonFileName);
+
+        // res.status(200).send("File uploaded and data saved.");
+
+        res.status(201).json({ message: "File uploaded and data saved", data: data_for_save });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Внутренняя ошибка сервера" });
+    }
+};
+
 
 // module.exports.createFareCurrentUserOrder = async (req, res) => {
 //     try {

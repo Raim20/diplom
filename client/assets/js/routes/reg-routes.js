@@ -3,7 +3,7 @@ const Auth = require("../controllers/reg-controller.js");
 
 const router = express.Router();
 
-router.get('/reg', Auth.getReg);
+router.get('/reg/user', Auth.getReg);
 
 router.get('/reg/driver', Auth.getRegDriver);
 

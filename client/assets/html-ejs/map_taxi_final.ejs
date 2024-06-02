@@ -15,65 +15,60 @@
 <body>
     <div>
         <%- include('./partials/nav.ejs') %>
-        <div id='map' class="map"></div>
         <div class="container">
-            
-                <div id="map-container" class="map-container">
-                    <div class="search-container">
-                        <div id="start-search-input-container" class="search-input-container">
-                            <input id="start-input" class="search-input" type="text" placeholder="Введите начальное место">
-                            <button id="start-delete" class="search-button"></button>
-                            <button id="get_location_start" class="get_location hidden">
-                                <img class="get_location_image" src="/svg/show_my_location_not_active.svg" alt="not-active">
-                            </button>
-                        </div>
-                        <div id="end-search-input-container" class="search-input-container">
-                            <input id="end-input" class="search-input" type="text" placeholder="Введите конечное место">
-                            <button id="end-delete" class="search-button"></button>
-                            <button id="get_location_end" class="get_location hidden">
-                                <img class="get_location_image" src="/svg/show_my_location_not_active.svg" alt="not-active">
-                            </button>
+            <div id="map-container" class="map-container">
+                <div class="search-container">
+                    <div id="start-search-input-container" class="search-input-container">
+                        <input id="start-input" class="search-input" type="text" placeholder="Введите начальное место">
+                        <button id="start-delete" class="search-button"></button>
+                        <button id="get_location_start" class="get_location hidden">
+                            <img class="get_location_image" src="/svg/show_my_location_not_active.svg" alt="not-active">
+                        </button>
+                    </div>
+                    <div id="end-search-input-container" class="search-input-container">
+                        <input id="end-input" class="search-input" type="text" placeholder="Введите конечное место">
+                        <button id="end-delete" class="search-button"></button>
+                        <button id="get_location_end" class="get_location hidden">
+                            <img class="get_location_image" src="/svg/show_my_location_not_active.svg" alt="not-active">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button id="readyBtn" class="ready_btn" style="display: none;">Готова</button>
+            <div class="popup_container" id="popup">
+                <span class="close_btn" id="closePopupBtn">&times;</span>
+                <div id="popupContent" class="popup_card_header">
+                    <div data-id="econom" class="popup_card_style">
+                        <img class="popup_card_image popup_card_item_image" src="/svg/cars_logo/car_econom_not_active.svg" alt="not-active">
+                        <div class="catalog_page_1_list_1_item_info">
+                            <div class="popup_card_name popup_card_name_style">Эконом</div>
+                            <div class="popup_card_price">
+                                <div class="popup_card_price_style">999</div>
+                            </div>
                         </div>
                     </div>
-                    <!-- <div id='map' class="map"></div> -->
-                </div>
-                <button id="readyBtn" class="ready_btn" style="display: none;">Готова</button>
-                <div class="popup_container" id="popup">
-                    <span class="close_btn" id="closePopupBtn">&times;</span>
-                    <div id="popupContent" class="popup_card_header">
-                        <div data-id="econom" class="popup_card_style">
-                            <img class="popup_card_image popup_card_item_image" src="/svg/cars_logo/car_econom_not_active.svg" alt="not-active">
-                            <div class="catalog_page_1_list_1_item_info">
-                                <div class="popup_card_name popup_card_name_style">Эконом</div>
-                                <div class="popup_card_price">
-                                    <div class="popup_card_price_style">999</div>
-                                </div>
+                    <div data-id="comfort" class="popup_card_style">
+                        <img class="popup_card_image popup_card_item_image" src="/svg/cars_logo/car_comfort_not_active.svg" alt="not-active">
+                        <div class="catalog_page_1_list_1_item_info">
+                            <div class="popup_card_name popup_card_name_style">Комфорт</div>
+                            <div class="popup_card_price">
+                                <div class="popup_card_price_style">999</div>
                             </div>
                         </div>
-                        <div data-id="comfort" class="popup_card_style">
-                            <img class="popup_card_image popup_card_item_image" src="/svg/cars_logo/car_comfort_not_active.svg" alt="not-active">
-                            <div class="catalog_page_1_list_1_item_info">
-                                <div class="popup_card_name popup_card_name_style">Комфорт</div>
-                                <div class="popup_card_price">
-                                    <div class="popup_card_price_style">999</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-id="premium" class="popup_card_style">
-                            <img class="popup_card_image popup_card_item_image" src="/svg/cars_logo/car_premium_not_active.svg" alt="not-active">
-                            <div class="catalog_page_1_list_1_item_info">
-                                <div class="popup_card_name popup_card_name_style">Премиум</div>
-                                <div class="popup_card_price">
-                                    <div class="popup_card_price_style">999</div>
-                                </div>
+                    </div>
+                    <div data-id="premium" class="popup_card_style">
+                        <img class="popup_card_image popup_card_item_image" src="/svg/cars_logo/car_premium_not_active.svg" alt="not-active">
+                        <div class="catalog_page_1_list_1_item_info">
+                            <div class="popup_card_name popup_card_name_style">Премиум</div>
+                            <div class="popup_card_price">
+                                <div class="popup_card_price_style">999</div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-        <!-- <div class="background_image_3">
-            
-        </div> -->
+        <div id='map' class="map"></div>
         <%- include('./partials/page_end.ejs') %>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCf1nHYl5YE5vomdD0vzdRlfRJEQ9pqZEM&libraries=places,geometry"></script>
             <script type="module" src="/static_functions/display_popup.js"></script>
@@ -82,7 +77,7 @@
             <script type="module" src="/components/map/init_map.js"></script>
             <script type="module" src="/components/map/action_event_handler_final.js"></script>
             <script type="module" src="/components/map/validate_user_current_location_final.js"></script>
-            <script type="module" src="/components/map/action_event_handler_final.js"></script>
+            <script type="module" src="/components/map/autocomplete_input_final.js"></script>
     </div>
 </body>
 </html>

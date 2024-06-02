@@ -24,5 +24,6 @@ router.post('/api/order/current_order', authMiddleware_2, Order.createCurrentOrd
 router.get('/api/order/current_user_order', authMiddleware_2, Order.getCurrentUserOrder);
 router.post('/api/order/current_user_order', authMiddleware_2, Order.createCurrentUserOrder);
 router.post('/api/order/upload_current_user_order', authMiddleware_2, Order.uploadCurrentUserOrder);
+router.post('/api/order/upload_user_driver_data', authMiddleware_2, Order.uploadUserDriverData);
 
 module.exports = router;

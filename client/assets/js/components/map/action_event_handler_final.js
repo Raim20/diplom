@@ -4,6 +4,7 @@ import { getCurrentPosition } from "./validate_user_current_location_final.js";
 import { fetchGetFareCurrentUserOrder } from "./get-fare-current-user-order_final.js";
 import { fetchCreateCurrenUserOrder } from "../taxi/create-current-user-order_final.js";
 import { fetchUploadCurrenUserOrder } from "../taxi/upload-current-user-order_final.js";
+import { fetchUploadUserDriverData } from "../taxi/upload-user-driver-data_final.js";
 import { showPopup, hidePopup } from "../../static_functions/display_popup.js";
 
 
@@ -39,6 +40,49 @@ if (!startDeleteButton || !endDeleteButton) {
     console.error("Delete buttons are missing from the DOM.");
 }
 
+function getRandomInt(n, k) {
+    return Math.floor(Math.random() * (k - n + 1)) + n;
+}
+
+const n = 1;
+const k = 6;
+
+
+function user_driver_data_for_upload() {
+    const drivers = [];
+    const users = [];
+
+    for (let i = 0; i < Bot.driver.length; i++) {
+        const driver = {
+            driverId: Bot.driver[i].driverId,
+            driverName: Bot.driver[i].driverName,
+            pickupLocation: Bot.driver[i].latlng.lat,
+            categories: Bot.driver[i].categories,
+        };
+        drivers.push(driver);
+    }
+
+    for (let i = 0; i < Bot.user.length; i++) {
+        const user = {
+            userId: Bot.user[i].userId,
+            userName: Bot.user[i].userName,
+            pickupLocation: Bot.user[i].latlng.lat,
+            destination: Bot.user[i].latlng.lng,
+        };
+        users.push(user);
+    }
+
+    const user_driver_data_for_upload = {
+        drivers: drivers,
+        users: users
+    };
+
+    console.log(user_driver_data_for_upload);
+
+    return user_driver_data_for_upload;
+}
+
+
 function limitMarkers(newLatLng) {
     if (!Marker.get_start_marker()) {
         Marker.set_start_marker(newLatLng);
@@ -56,7 +100,8 @@ function limitMarkers(newLatLng) {
             lngMin: Marker.get_start_marker().getPosition().lng() - 0.005,
             lngMax: Marker.get_start_marker().getPosition().lng() + 0.005
         };
-        Bot.create_bots(5, area);
+        Bot.create_bots(getRandomInt(n, k), area, getRandomInt(n, k));
+        fetchUploadUserDriverData(user_driver_data_for_upload());
         readyButton.style.display = 'block';
         // startBotSimulation(Marker.get_start_marker().getPosition(), 10);
     } else {
@@ -119,7 +164,8 @@ export function check_button(userPos, check) {
             lngMin: Marker.get_start_marker().getPosition().lng() - 0.005,
             lngMax: Marker.get_start_marker().getPosition().lng() + 0.005
         };
-        Bot.create_bots(10, area);
+        Bot.create_bots(getRandomInt(n, k), area, getRandomInt(n, k));
+        fetchUploadUserDriverData(user_driver_data_for_upload());
         // startBotSimulation(Marker.get_start_marker().getPosition(), 10);
         readyButton.style.display = 'block';
     } else {
@@ -170,8 +216,51 @@ async function handlePopupItemClick(event) {
             destination: destination,
             fare: Number(price),
         };
+        // const drivers = [];
+        // const users = [];
+
+        // for (let i = 0; i < Bot.driver.length; i++) {
+        //     const driver = {
+        //         driverId: Bot.driver[i].driverId,
+        //         driverName: Bot.driver[i].driverName,
+        //         pickupLocation: Bot.driver[i].latlng.lat,
+        //         categories: Bot.driver[i].categories,
+        //     };
+        //     drivers.push(driver);
+        // }
+
+        // for (let i = 0; i < Bot.user.length; i++) {
+        //     const user = {
+        //         userId: Bot.user[i].userId,
+        //         userName: Bot.user[i].userName,
+        //         pickupLocation: Bot.user[i].latlng.lat,
+        //         destination: Bot.user[i].latlng.lng,
+        //     };
+        //     users.push(user);
+        // }
+
+        // const user_driver_data_for_upload = {
+        //     drivers: drivers,
+        //     users: users
+        // };
+
+        // console.log(user_driver_data_for_upload);
+
+        // const user_driver_data_for_upload = {
+        //     driver: [{
+        //         driverId: driverId,
+        //         pickupLocation: pickupLocation,
+        //         categories: categories,
+        //     }],
+        //     user: [{
+        //         userId: userId,
+        //         pickupLocation: pickupLocation,
+        //         destination: destination,
+        //     }],
+        // };
         fetchCreateCurrenUserOrder(order);
         fetchUploadCurrenUserOrder(order_for_upload);
+        // fetchUploadUserDriverData(user_driver_data_for_upload);
         Bot.stopAndClearAllBots();
         // return order;
     }

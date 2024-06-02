@@ -1,0 +1,128 @@
+{
+  "userId": "6653195a5841ba50472b9c21",
+  "order": {
+    "driver": {
+      "marker": {
+        "__gm": {
+          "set": null,
+          "Pv": null,
+          "bq": {
+            "map": null,
+            "streetView": null
+          },
+          "Mo": {
+            "size": {
+              "width": 16,
+              "height": 16
+            },
+            "anchor": {
+              "x": 8,
+              "y": 8
+            },
+            "labelOrigin": {
+              "x": 8,
+              "y": 8
+            }
+          },
+          "Cv": null,
+          "pn": false
+        },
+        "gm_accessors_": {
+          "position": null,
+          "map": null,
+          "draggable": null,
+          "icon": null,
+          "clickable": null,
+          "visible": null,
+          "internalPosition": null,
+          "anchorPoint": null,
+          "animation": null,
+          "animating": null
+        },
+        "position": {
+          "lat": 43.247094268360165,
+          "lng": 76.93362889549702
+        },
+        "gm_bindings_": {
+          "position": {},
+          "map": {},
+          "draggable": {},
+          "icon": {},
+          "clickable": {},
+          "visible": {},
+          "internalPosition": {},
+          "place": {},
+          "dragging": {},
+          "label": {},
+          "cross": {},
+          "shape": {},
+          "useDefaults": {},
+          "title": {},
+          "cursor": {},
+          "zIndex": {},
+          "opacity": {},
+          "anchorPoint": {},
+          "animation": {},
+          "crossOnDrag": {},
+          "raiseOnDrag": {},
+          "animating": {}
+        },
+        "map": null,
+        "closure_uid_100339115": 368,
+        "draggable": false,
+        "icon": {
+          "path": 0,
+          "fillColor": "#a3c2c2",
+          "fillOpacity": 1,
+          "strokeWeight": 0,
+          "scale": 8
+        },
+        "clickable": true,
+        "visible": true,
+        "internalPosition": {
+          "lat": 43.247094268360165,
+          "lng": 76.93362889549702
+        },
+        "__e3_": {
+          "click_added": {},
+          "click_removed": {},
+          "dblclick_added": {},
+          "dblclick_removed": {},
+          "rightclick_added": {},
+          "rightclick_removed": {},
+          "contextmenu_added": {},
+          "contextmenu_removed": {}
+        },
+        "anchorPoint": {
+          "x": 0,
+          "y": -8,
+          "Fg": true
+        },
+        "animation": null,
+        "animating": false
+      },
+      "latlng": {
+        "lat": 43.247094268360165,
+        "lng": 76.93362889549702
+      },
+      "category": "econom",
+      "id": "BmR6Ywoz",
+      "name": "Alice"
+    },
+    "pickupLocation": {
+      "coordinates": [
+        43.24386752933945,
+        76.9308990478516
+      ]
+    },
+    "destination": {
+      "coordinates": [
+        43.2568254403882,
+        76.92403258229609
+      ]
+    },
+    "fare": 50.05,
+    "rainCoefficient": 0
+  },
+  "uploadDate": "02062024-232710_316"
+}

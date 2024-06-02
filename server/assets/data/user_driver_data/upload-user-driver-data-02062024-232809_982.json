@@ -1,0 +1,60 @@
+{
+  "userId": "6653195a5841ba50472b9c21",
+  "data": {
+    "drivers": [
+      {
+        "driverId": "IEUWW6Zy",
+        "driverName": "Alice",
+        "pickupLocation": 43.26171231255494
+      },
+      {
+        "driverId": "DQRUZAAa",
+        "driverName": "Bob",
+        "pickupLocation": 43.26089576458122
+      },
+      {
+        "driverId": "SGFFIkYD",
+        "driverName": "Bob",
+        "pickupLocation": 43.26082600158585
+      },
+      {
+        "driverId": "FjDkWLJh",
+        "driverName": "Bob",
+        "pickupLocation": 43.26562816307879
+      }
+    ],
+    "users": [
+      {
+        "userId": "iSNIeBCs",
+        "userName": "Emma",
+        "pickupLocation": 43.26014679466173,
+        "destination": 76.9347557492125
+      },
+      {
+        "userId": "QZalCAU1",
+        "userName": "Michael",
+        "pickupLocation": 43.26099912209943,
+        "destination": 76.92998871478753
+      },
+      {
+        "userId": "VG4XxHh9",
+        "userName": "John",
+        "pickupLocation": 43.265584146747955,
+        "destination": 76.93315181367443
+      },
+      {
+        "userId": "W3slaZw3",
+        "userName": "John",
+        "pickupLocation": 43.26824902807065,
+        "destination": 76.93332713045486
+      },
+      {
+        "userId": "7uJ6NndZ",
+        "userName": "Michael",
+        "pickupLocation": 43.26017903809744,
+        "destination": 76.93261004213345
+      }
+    ]
+  },
+  "uploadDate": "02062024-232809_982"
+}

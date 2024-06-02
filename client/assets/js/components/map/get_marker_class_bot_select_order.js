@@ -5,6 +5,8 @@ class BotMarkerFunction {
     constructor(map) {
         this.map = map;
         this.markers = [];
+        this.user = [];
+        this.driver = [];
         // this.initial_area = {
         //     latMin: 40,
         //     latMax: 41,
@@ -89,7 +91,7 @@ class BotMarkerFunction {
         return distribution;
     }
 
-    create_bots(numBots, area) {
+    create_bots(numBots, area, userBots) {
         this.delete_all_markers();
 
         const distribution = this.distributeCategories(numBots);
@@ -99,8 +101,14 @@ class BotMarkerFunction {
                 const position = this.generateRandomLatLng(area);
                 const marker = this.create_marker(position, category);
                 this.markers.push({ marker: marker, latlng: position, category: category, id: this.generateRandomId(8), name: this.generateRandomName() });
+                // this.user.push({ latlng: this.generateRandomLatLng(area), userId: this.generateRandomId(8), userName: this.generateRandomName() });
+                this.driver.push({ latlng: position, category: category, driverId: this.generateRandomId(8), driverName: this.generateRandomName() });
                 // this.get_route_and_move_bot(marker, area);
             }
+        }
+
+        for (let i = 0; i < userBots; i++) {
+            this.user.push({ latlng: this.generateRandomLatLng(area), userId: this.generateRandomId(8), userName: this.generateRandomName() });
         }
 
         this.markers.forEach(markerData => {
